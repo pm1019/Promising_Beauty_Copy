@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+         
+    <title>Login & Registration Form</title>
+</head>
+<style>
+    .form .input-field{
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <div class="container" style="margin-left: 100px;">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <a href="index.html"><input type="button" value="Login Now"></a>
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup now</a>
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your Phon No" required>
+                        <i class="uil uil-phone"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your Address" required>
+                        <i class="uil uil-map-marker"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="number" class="number" placeholder="Adhar Card Number" required>
+                        <i class="uil uil-credit-card-search"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="sigCheck">
+                            <label for="sigCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button login-link">
+                        <input type="button" value="Register">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already have an account?
+                        <a href="#" class="text login-link">Login</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form login">
+        <img src="{% static 'img/reg_log2.png' %}" style="height: 400px; width:550px; margin-left:100px;">
+    </div>
+    <script src="{% static 'js/script1.js' %}"></script>
+</body>
+</html>

@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'HOME',
-    'ADD_TO_CART'
+    'ADD_TO_CART',
+    'DASHBOARD',
+    'PRODUCT',
+    'AUTHENTICATION',
+    'PAYMENT',
+    'WISHLIST'
 ]
 
 MIDDLEWARE = [
@@ -77,8 +82,12 @@ WSGI_APPLICATION = 'Promising_beauty.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'DEMO1',
+        'USER':'postgres',
+        'PASSWORD':'12345',
+        'HOST':'localhost',
+        'PORT':'5432'
     }
 }
 

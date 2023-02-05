@@ -1,4 +1,6 @@
 from django.db import models
+from DASHBOARD.models import Customer_details
+from PRODUCT.models import P_Details
 
 # Create your models here.
 class Add_to_cart(models.Model):

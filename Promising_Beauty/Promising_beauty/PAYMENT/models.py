@@ -1,5 +1,5 @@
 from django.db import models
-from DAHBOARD.models import Customer_details
+from DASHBOARD.models import Customer_details
 from ORDERS.models import order
 from PRODUCT.models import P_Details
 # Create your models here.

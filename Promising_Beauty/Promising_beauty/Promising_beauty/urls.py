@@ -18,5 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('HOME.urls'))
+    path('',include('HOME.urls')),
+    path('addtocart',include('ADD_TO_CART.urls'))
 ]

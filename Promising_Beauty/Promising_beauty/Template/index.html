@@ -62,9 +62,9 @@
 
     <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!--<div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div>-->
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -129,7 +129,7 @@
                             <li><a href="#"><span class="icon_heart_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
-                            <li><a href="./shop-cart.html"><span class="icon_bag_alt"></span>
+                            <li><a href="cart/AddToCart"><span class="icon_bag_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
                         </ul>
@@ -148,9 +148,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 p-0">
-                    <div class="categories__item categories__large__item set-bg"
-                    data-setbg="img/categories/cat.jpeg">
-                  <!--  <div class="categories__text">
+                    <div class="categories__item categories__large__item set-bg" data-setbg="{% static 'img/categories/cat.jpeg' %}">
+                    <!--  <div class="categories__text">
                         <h1>Women’s fashion</h1>
                         <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
                         edolore magna aliquapendisse ultrices gravida.</p>

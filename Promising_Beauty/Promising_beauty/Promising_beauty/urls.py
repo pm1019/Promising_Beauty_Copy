@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cart/',include('ADD_TO_CART.urls')),
+    path('dash/',include('DASHBOARD.urls')),
     path('',include('HOME.urls')),
-    path('addtocart/',include('ADD_TO_CART.urls')),
-    path('dashboard/',include('DASHBOARD.urls')),
-    path('',include('HOME.urls'))
-]
+    path('wish/',include('WISHLIST.urls')),
+    path('auth/',include('AUTHENTICTION.urls')),
+    path('shop/',include('PRODUCT.urls')),
+    path('order/',include('ORDERS.urls'))
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

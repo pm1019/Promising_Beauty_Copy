@@ -1,3 +1,8 @@
 from django.contrib import admin
+from django.contrib.admin.sites import site
+from WISHLIST.models import Wishlist
+from DASHBOARD.models import Customer_details
+from PRODUCT.models import P_Details
 
-# Register your models here.
+admin.site.register(Wishlist)
+

@@ -22,7 +22,9 @@ urlpatterns = [
     path('dash/',include('DASHBOARD.urls')),
     path('',include('HOME.urls')),
     path('wish/',include('WISHLIST.urls')),
-    path('auth/',include('AUTHENTICTION.urls'))
+    path('auth/',include('AUTHENTICTION.urls')),
+    path('shop/',include('PRODUCT.urls')),
+    path('order/',include('ORDERS.urls'))
     
 
 ]

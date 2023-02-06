@@ -325,9 +325,10 @@
                 </div>
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
+                        {% for Prod in Prods %}
                         <div class="col-lg-4 col-md-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{% static 'img/product/cks2_1.jpg' %}">
+                                <div class="product__item__pic set-bg" data-setbg="{{Prod.p_img.url}}">
                                     <div class="label new">New</div>
                                     <ul class="product__hover">
                                         <li><a href="{% static 'img/product/cks2_1.jpg' %}" class="image-popup"><span class="arrow_expand"></span></a></li>
@@ -336,7 +337,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">Furry hooded parka</a></h6>
+                                    <h6><a href="#">{{Prod.p_name}}</a></h6>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -344,11 +345,12 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </div>
-                                    <div class="product__price">&#8377 999/-</div>
+                                    <div class="product__price">&#8377 {{Prod.p_price}}</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        {% endfor %}
+                       <!-- <div class="col-lg-4 col-md-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="{% static 'img/product/ct1_1.jpg' %}">
                                     <ul class="product__hover">
@@ -526,7 +528,7 @@
                                     <div class="product__price">&#8377 999/- <span>&#8377 999/-</span></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="col-lg-12 text-center">
                             <div class="pagination__option">
                                 <a href="#">1</a>

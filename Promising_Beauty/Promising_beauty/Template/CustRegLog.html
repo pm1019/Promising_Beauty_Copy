@@ -94,11 +94,13 @@
                         <a href="#" class="text">Forgot password?</a>
                     </div>
 
-                    <div class="input-field button">
+                    <div class="input-field button" onclick="mesg()">
                         <input type="submit" value="Register">
                     </div>
                 </form>
-
+                <div style="display: none;" id="messg">
+                    <h4>{{msg}}</h4>
+                </div>
                 <div class="login-signup">
                     <span class="text">Already have an account?
                         <a href="#" class="text login-link">Login</a>
@@ -111,6 +113,10 @@
         <img src="{% static 'img/reg_log.png' %}" style="height: 400px; width:500px; margin-left:100px;">
     </div>
     <script src="{% static 'js/script1.js' %}"></script>
-
+    <script>
+        function mesg(){
+            document.getElementById('messg').style.display='block';
+        }
+    </script>
 </body>
 </html>

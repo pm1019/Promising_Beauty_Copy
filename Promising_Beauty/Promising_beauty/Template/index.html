@@ -104,7 +104,7 @@
                         <ul class="header_ul">
                             <li class="active"><a href="./index.html">Home</a></li>
                             <li><a href="shop/product">Shop</a></li>
-                            <li><a href="#">HI User!</a>
+                            <li><a href="#">HI {{user.first_name}}!</a>
                                 <ul class="dropdown">
                                     <li><a href="dash/dashboard">My Profile</a></li>
                                     <li><a href="order/myorder">My Orders</a></li>
@@ -120,9 +120,18 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="header__right">
+                        {% if user.is_authenticated %}
+                        <div class="header__right__auth">
+                            <p>Hello, {{user.first_name}}</p>
+                        </div>
+                        <div class="header__right__auth">
+                            <a href="auth/logout">logout</a>
+                        </div>
+                        {% else %}
                         <div class="header__right__auth">
                             <a href="auth/login">Login/Registration</a>
                         </div>
+                        {% endif %}
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
                             <li><a href="wish/wishlist"><span class="icon_heart_alt"></span>

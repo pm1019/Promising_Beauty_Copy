@@ -3,7 +3,19 @@ from django.contrib.auth.models import User, auth
 
 # Create your views here.
 def login(request):
-    return render(request,'CustRegLog.html')
+    if request.method == 'POST':
+        username=request.POST['username']
+        password = request.POST['password']
+
+        user=auth.authenticate(username=username,password=password)
+        if user is not None:
+            auth.login(request,user)
+            return redirect('/')
+        else:
+            message='Invalid Credentials..'
+            return redirect('login')
+    else:
+        return render(request,'CustRegLog.html',{'msg2':message})
 
 def register(request):
     if request.method == 'POST':
@@ -23,7 +35,7 @@ def register(request):
                 user=User.objects.create_user(username=username,first_name=first_name,last_name=last_name,password1=password1,password2=password2,email=email)
                 user.save();
                 print('user created')
-                return redirect('/')
+                return redirect('login')
         else:
             message='Password not Matching..'
 

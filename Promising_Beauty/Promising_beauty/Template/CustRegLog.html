@@ -28,7 +28,7 @@
                         <i class="uil uil-user icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" name="username" required>
+                        <input type="password" class="password" placeholder="Enter your password" name="password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -41,16 +41,11 @@
                         
                         <a href="#" class="text">Forgot password?</a>
                     </div>
-
+                    
                     <div class="input-field button">
-                        <a href="index.html"><input type="submit" value="Login Now" onclick="mesg2()"></a>
+                        <a href="index.html"><input type="submit" value="Login Now" ></a>
                     </div>
                 </form>
-                <div style="display: none;" id="messg2">
-                    {% for msg in message %}
-                    <h4>{{msg2}}</h4>
-                    {% endfor %}
-                </div>
                 <div class="login-signup">
                     <span class="text">Not a member?
                         <a href="#" class="text signup-link">Signup now</a>
@@ -124,9 +119,7 @@
         function mesg(){
             document.getElementById('messg').style.display='block';
         }
-        function mesg2(){
-            document.getElementById('messg2').style.display='block';
-        }
+        
     </script>
 </body>
 </html>

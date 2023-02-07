@@ -15,7 +15,7 @@ def login(request):
             message='Invalid Credentials..'
             return redirect('login')
     else:
-        return render(request,'CustRegLog.html',{'msg2':message})
+        return render(request,'CustRegLog.html')
 
 def register(request):
     if request.method == 'POST':
@@ -32,7 +32,7 @@ def register(request):
             elif User.objects.filter(email=email).exists():
                 message='Email already Taken..'
             else:
-                user=User.objects.create_user(username=username,first_name=first_name,last_name=last_name,password1=password1,password2=password2,email=email)
+                user=User.objects.create_user(username=username,first_name=first_name,last_name=last_name,password=password1,email=email)
                 user.save();
                 print('user created')
                 return redirect('login')

@@ -141,77 +141,67 @@
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="checkout__form__input">
                                     <p>First Name <span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" name="first_name">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="checkout__form__input">
                                     <p>Last Name <span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" name="last_name">
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="checkout__form__input">
                                     <p>Country <span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" name="country">
                                 </div>
                                 <div class="checkout__form__input">
                                     <p>Address <span>*</span></p>
-                                    <input type="text" placeholder="Street Address">
-                                    <input type="text" placeholder="Apartment. suite, unite ect ( optinal )">
+                                    <input type="text" placeholder="Street Address" name="addressLine1">
+                                    <input type="text" placeholder="Apartment. suite, unite ect ( optinal )" name="addressLine2">
                                 </div>
                                 <div class="checkout__form__input">
-                                    <p>Town/City <span>*</span></p>
-                                    <input type="text">
+                                    <p>City <span>*</span></p>
+                                    <input type="text" name="city">
                                 </div>
                                 <div class="checkout__form__input">
-                                    <p>Country/State <span>*</span></p>
-                                    <input type="text">
+                                    <p>State <span>*</span></p>
+                                    <input type="text" name="state">
                                 </div>
                                 <div class="checkout__form__input">
                                     <p>Postcode/Zip <span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" name="zipcode">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="checkout__form__input">
                                     <p>Phone <span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" name="phone">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="checkout__form__input">
                                     <p>Email <span>*</span></p>
-                                    <input type="text">
+                                    <input type="text" name="email">
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <div class="checkout__form__checkbox">
-                                    <label for="acc">
-                                        Create an acount?
-                                        <input type="checkbox" id="acc">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <p>Create am acount by entering the information below. If you are a returing
-                                        customer login at the <br />top of the page</p>
+                                    <div class="checkout__form__checkbox">
+                                        <a href="auth/login">
+                                            <label for="acc">
+                                                Create an acount?
+                                            </label>
+                                        </a>
                                     </div>
                                     <div class="checkout__form__input">
-                                        <p>Account Password <span>*</span></p>
-                                        <input type="text">
+                                        
                                     </div>
                                     <div class="checkout__form__checkbox">
-                                        <label for="note">
-                                            Note about your order, e.g, special noe for delivery
-                                            <input type="checkbox" id="note">
-                                            <span class="checkmark"></span>
-                                        </label>
+                                        
                                     </div>
                                     <div class="checkout__form__input">
-                                        <p>Oder notes <span>*</span></p>
-                                        <input type="text"
-                                        placeholder="Note about your order, e.g, special noe for delivery">
+                                        
                                     </div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -236,32 +226,32 @@
                                     </ul>
                                 </div>
                                 <div class="checkout__order__widget form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="fun()">
+                                    <input class="form-check-input" type="radio" name="typeupi" id="flexRadioDefault1" onclick="fun()">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         UPI
                                     </label>
                                         <div class="row" id="upi-form" style="display: none;">
                                             <div class="col-lg-12">
                                             <label for="cc-name"><b>UPI ID</b></label>
-                                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                            <input type="text" class="form-control" id="cc-name" placeholder="UPI ID" name="upiid" required>
                                             <small class="text-muted"></small>
                                             <div class="invalid-feedback">
                                             </div>
                                             </div>
                                         </div>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="fun1()">
+                                    <input class="form-check-input" type="radio" name="typeCreditCard" id="flexRadioDefault1" onclick="fun1()">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         Credit Card
                                     </label>
                                         <div id="credit-form" class="row" style="display: none;">
                                             <div class="col-lg-12">
                                             <label for="cc-name"><b>Name on Credit card</b></label>
-                                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                            <input type="text" class="form-control" id="cc-name" placeholder="Name on Card" name="cc_name" required>
                                             <small class="text-muted"></small>
                                             </div>
                                             <div class="col-lg-12">
                                             <label for="cc-number"><b>Credit card number</b></label>
-                                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                            <input type="text" class="form-control" id="cc-number" placeholder="Credit Card Number" name="cc_num" required>
                                             <div class="invalid-feedback">
                                             </div>
                                             </div>
@@ -269,30 +259,30 @@
                                         <div id="credit-form2" class="row" style="display: none;">
                                             <div class="col-lg-12">
                                             <label for="cc-expiration"><b>Expiration</b></label>
-                                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                            <input type="text" class="form-control" id="cc-expiration" placeholder="Expiration Date" name="cc_Exdate" required>
                                             <div class="invalid-feedback">
                                             </div>
                                             </div>
                                             <div class="col-lg-12">
                                             <label for="cc-cvv"><b>CVV</b></label>
-                                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                            <input type="text" class="form-control" id="cc-cvv" placeholder="CVV" required>
                                             <div class="invalid-feedback">
                                             </div>
                                             </div>
                                         </div>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="fun2()">
+                                    <input class="form-check-input" type="radio" name="typeDabitcard" id="flexRadioDefault1" onclick="fun2()">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         Debit Card
                                     </label>
                                     <div id="debit-form" class="row" style="display: none;">
                                         <div class="col-lg-12">
                                         <label for="cc-name"><b>Name on Debit card</b></label>
-                                        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                        <input type="text" class="form-control" id="cc-name" placeholder="Name on Card" name="dc_name" required>
                                         <small class="text-muted"></small>
                                         </div>
                                         <div class="col-lg-12">
                                         <label for="cc-number"><b>Debit card number</b></label>
-                                        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                        <input type="text" class="form-control" id="cc-number" placeholder="Dabit Card Number" name="dc_num" required>
                                         <div class="invalid-feedback">
                                         </div>
                                         </div>
@@ -300,13 +290,13 @@
                                     <div id="debit-form2" class="row" style="display: none;">
                                         <div class="col-lg-12">
                                         <label for="cc-expiration"><b>Expiration</b></label>
-                                        <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                        <input type="text" class="form-control" id="cc-expiration" placeholder="Expiration Date" name="dc_Exdate" required>
                                         <div class="invalid-feedback">
                                         </div>
                                         </div>
                                         <div class="col-lg-12">
                                         <label for="cc-cvv"><b>CVV</b></label>
-                                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                        <input type="text" class="form-control" id="cc-cvv" placeholder="CVV" required>
                                         <div class="invalid-feedback">
                                         </div>
                                         </div>

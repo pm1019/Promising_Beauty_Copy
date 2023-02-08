@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'HOME',
-    'ADD_TO_CART',
     'DASHBOARD',
     'PRODUCT',
     'AUTHENTICTION',

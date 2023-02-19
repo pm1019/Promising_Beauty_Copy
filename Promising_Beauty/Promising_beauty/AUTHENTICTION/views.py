@@ -42,6 +42,3 @@ def register(request):
     else:
         return render(request,'CustRegLog.html',{'msg':message})    
 
-def logout(request):
-    auth.logout(request)
-    return redirect('/')

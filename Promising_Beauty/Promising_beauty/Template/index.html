@@ -120,24 +120,17 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="header__right">
-                        {% if user.is_authenticated %}
-                        <div class="header__right__auth">
-                            <p>Hello, {{user.first_name}}</p>
-                        </div>
-                        <div class="header__right__auth">
-                            <a href="auth/logout">logout</a>
-                        </div>
-                        {% else %}
+                       
+                        
                         <div class="header__right__auth">
                             <a href="auth/login">Login/Registration</a>
                         </div>
-                        {% endif %}
                         <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
                             <li><a href="wish/wishlist"><span class="icon_heart_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
-                            <li><a href="cart/Addtocart"><span class="icon_bag_alt"></span>
+                            <li><a href="shop-cart/cart"><span class="icon_bag_alt"></span>
                                 <div class="tip">2</div>
                             </a></li>
                         </ul>

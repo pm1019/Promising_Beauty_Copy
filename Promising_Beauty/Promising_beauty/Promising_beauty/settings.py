@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'AUTHENTICTION',
     'PAYMENT',
     'WISHLIST',
-    'ORDERS'
+    'ORDERS',
+    'Cart'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ WSGI_APPLICATION = 'Promising_beauty.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'DEMO1',
+        'NAME':'DEMO1', 
         'USER':'postgres',
         'PASSWORD':'12345',
         'HOST':'localhost',
